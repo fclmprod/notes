@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-Black.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-Black.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-Black.svg#62522409f86653800195e8c86d7c6a01') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  900;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-ExtraBold.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-ExtraBold.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-ExtraBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-ExtraBold.svg#049cf839a867aacb807f8c0e67cfd9b2') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  800;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-Bold.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-Bold.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-Bold.svg#dbe8ac86215e713944923a645f83623c') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Work Sans SemiBold';
+  src: url('WorkSans-SemiBold.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-SemiBold.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-SemiBold.svg#9e177bfc73a875f1b6a26f88ef870d5c') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  600;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-Medium.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-Medium.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-Medium.svg#3d242c29f15a81eef0f8598429cdbb17') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-Regular.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-Regular.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-Regular.svg#f310d4dccd89e059e79d3b6deebb4725') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-Light.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-Light.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-Light.svg#876294007e177fff9d4c47ce3e0254bb') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  300;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-ExtraLight.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-ExtraLight.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-ExtraLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-ExtraLight.svg#9475aada1ba94f660c9f61ef0a2c3c2f') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('WorkSans-Thin.eot'); /* IE9 Compat Modes */
+  src: url('WorkSans-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('WorkSans-Thin.woff') format('woff'), /* Modern Browsers */
+       url('WorkSans-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('WorkSans-Thin.svg#466f8a69311741213f887e941bc5dbf9') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  100;
+}
+
