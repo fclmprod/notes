@@ -1,2 +1,6 @@
-markdown: redcarpet;
-baseurl: ;
+# NOTES - 18.12.15
+# Martin Campillo
+
+markdown: redcarpet
+baseurl: /notes
+exclude: ['README']
