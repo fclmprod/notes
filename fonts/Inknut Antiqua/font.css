@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url('InknutAntiqua-Black.eot'); /* IE9 Compat Modes */
+  src: url('InknutAntiqua-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InknutAntiqua-Black.woff') format('woff'), /* Modern Browsers */
+       url('InknutAntiqua-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InknutAntiqua-Black.svg#bc77912da35c83b53ebb67d6e6ad7b19') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  900;
+}
+
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url('InknutAntiqua-ExtraBold.eot'); /* IE9 Compat Modes */
+  src: url('InknutAntiqua-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InknutAntiqua-ExtraBold.woff') format('woff'), /* Modern Browsers */
+       url('InknutAntiqua-ExtraBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InknutAntiqua-ExtraBold.svg#a8729864a401c81ea2057b5d6d15dd1e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  800;
+}
+
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url('InknutAntiqua-Bold.eot'); /* IE9 Compat Modes */
+  src: url('InknutAntiqua-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InknutAntiqua-Bold.woff') format('woff'), /* Modern Browsers */
+       url('InknutAntiqua-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InknutAntiqua-Bold.svg#be93c6b1a4babfa3576c0206385d497b') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url('InknutAntiqua-SemiBold.eot'); /* IE9 Compat Modes */
+  src: url('InknutAntiqua-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InknutAntiqua-SemiBold.woff') format('woff'), /* Modern Browsers */
+       url('InknutAntiqua-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InknutAntiqua-SemiBold.svg#8390c534abac05cfd6452ddb7111e716') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  600;
+}
+
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url('InknutAntiqua-Medium.eot'); /* IE9 Compat Modes */
+  src: url('InknutAntiqua-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InknutAntiqua-Medium.woff') format('woff'), /* Modern Browsers */
+       url('InknutAntiqua-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InknutAntiqua-Medium.svg#b95c36aeba4b7bc42548718dedfdc560') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url('InknutAntiqua-Regular.eot'); /* IE9 Compat Modes */
+  src: url('InknutAntiqua-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InknutAntiqua-Regular.woff') format('woff'), /* Modern Browsers */
+       url('InknutAntiqua-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InknutAntiqua-Regular.svg#99679993acff504f32531181523b817e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url('InknutAntiqua-Light.eot'); /* IE9 Compat Modes */
+  src: url('InknutAntiqua-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('InknutAntiqua-Light.woff') format('woff'), /* Modern Browsers */
+       url('InknutAntiqua-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('InknutAntiqua-Light.svg#8e1467ca125570b0a474d8ecf4dbeea2') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  300;
+}
+
+
