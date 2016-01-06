@@ -1,17 +1,54 @@
 @import url('./init.css');
-@import url('../fonts/Infini/font.css');
+@import url('../fonts/Work Sans/font.css');
+@import url('../fonts/Source Sans Pro/font.css');
+@import url('../fonts/Anonymous Pro/font.css');
 
 body {
     background-color: #333;
     color:#fff;
-    font-family: "Work Sans";
+    font-family: "Source Sans Pro";
 }
 
+h1,h2,h3,h4,h5,h6 {font-family: "Work Sans";}
+
 h1 {
-    font-size: 90pt;
+    font-size: 28pt;
     font-weight: 900;
 }
 
-a:visited {
-    color:#fff;
+li {
+    font-size: 12pt;
+    line-height: 14pt;
+    padding: 4pt;
+}
+
+li span {
+    font-family: "Anonymous Pro";
+    font-size: 8pt;
+}
+
+a {
+    color: lightblue;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 350px;
+    
+    padding: 10px;
+}
+
+#content {
+    margin-left: 350px;
+    padding: 10px;
+}
+
+#content h2 {
+    margin-top: 10px;
+    
+    font-size: 21pt;
+    font-weight: 700;
 }
