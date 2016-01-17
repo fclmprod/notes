@@ -1,27 +1,22 @@
 <div id="menu">
-    <h1>Martin Campillo</h1>
-    <h4>Carnet de notes, travaux en cours et reflexions diverses.</h4>
+    <h1><a href="http://localhost:8888/Gits/notes/">Martin Campillo</a></h1>
+    <p>Carnet de notes, travaux en cours et reflexions diverses.</p>
+    
     
 <?php
-    
-$path = "./content/";
 
-echo "<ul>";
-// Open a directory, and read its contents
-if (is_dir($path)){
-  if ($dh = opendir($path)){
-    while (($file = readdir($dh))){
-        if( $file !== false && $file != "." && $file != ".." && $file != ".DS_Store") {
-            echo "<li><a href=\"?content=".$file."\">".$file. "</a> <span>".date ("d/m/y", filemtime($path.$file))."</span></li>"; 
-            
-        }
-      
-    }
-      
-    closedir($dh);
-  }
-}
-echo "</ul>";
-?>
+require_once("./php/functions.php");
+$path = "./content/";
+displayArray(sortArray(createArray($path),"date"));
+
+?>  
+    <div class="colorSwitch night">  
+      <input type="checkbox" id="colorSwitch" />
+      <label for="colorSwitch"></label>
+    </div>
+    
+    <h6>Version 0.0.1</h6>
+    
+    <script src="./js/main.js"></script>
     
 </div>

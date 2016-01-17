@@ -8,67 +8,76 @@
     <style type="text/css">
         @import url("./css/main.css");    
     </style>
+    <script src="./js/jquery-2.1.4.min.js"></script>
 </head>
 
-<body>
+<body class="day">
     
 <?php
-require_once("libs/Parsedown.php");
+require_once("./libs/Parsedown.php");
+require_once("./php/functions.php");
 
-$parsedown = new Parsedown();
+$Parsedown = new Parsedown();
     
 $readme = file_get_contents("README.md");
-    
-//echo $parsedown ->text($readme);
-    
 
 include("menu.php");
 ?>
     
+
 <div id="content">
 <?php
-
 $content = $_GET["content"];
-$getFile = $_GET["file"];    
+$getFile = $_GET["file"];
+    
+$path = "./content/".$content."/";
+$files = createArray($path);
 
+    
 if(isset($content)){
     echo "<h2>".$content."</h2>";
-    
-    $path = "./content/".$content."/";
-
-    echo "<ul>";
-    // Open a directory, and read its contents
-    if (is_dir($path)){
-      if ($dh = opendir($path)){
-        while (($file = readdir($dh))){
-            if( $file !== false && $file != "." && $file != ".." && $file != ".DS_Store") {
-                echo "<li><a href=\"?content=".$content."&file=".$file."\">".$file."</a> <span>".date ("d/m/y", filemtime($path.$file))."</span></li>"; 
-
-            }
-
-        }
-
-        closedir($dh);
-      }
+    if(empty($files)){
+       echo "Vide";
     }
-    echo "</ul>";
-    
+
+    else {
+        echo "<ul>";
+        foreach($files as $item){
+            echo "<li><a href=\"#".$item["name"]."\">".$item["name"]."</a> <span>".date("d/m/y",$item["date"])."</span></li>";
+        }
+        echo "<ul>";
+    }
 }
-    
 else {
-    echo $parsedown ->text($readme);
+    echo $Parsedown -> text($readme);
 }
 ?>
-<div id="file">
-    <?php
-    if(isset($getFile)){
-        echo "<h3>".$getFile."</h3>";
-        $fileContent = file_get_contents($path."/".$getFile);
-        echo $parsedown ->text($fileContent);
+    <div id="files">
+
+        <?php
+        if(empty($files)){
+           echo "Vide";
+        }
         
-    }
-    ?>
+        else {
+            foreach($files as $item){
+                echo "<div id=\"".$item["name"]."\">";
+                echo "<h3>".$item["name"]."</h3>";
+                if($item["extension"]=="md"){
+                    echo $Parsedown -> text(file_get_contents($path.$item["name"]));
+                }
+                if($item["extension"]=="mp3"){
+                    echo "<audio src=\"".$path.$item["name"]."\" controls>";
+                }
+                
+                echo "</div>";
+            }
+        }
+        ?>
+        
     </div>
-</div>    
+</div>
+
+<script src="./js/main.js"></script>
 </body>
 </html>
