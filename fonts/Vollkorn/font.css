@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-Bold.eot'); /* IE9 Compat Modes */
+  src: url('Vollkorn-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vollkorn-Bold.woff') format('woff'), /* Modern Browsers */
+       url('Vollkorn-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vollkorn-Bold.svg#4b28f1ba181832a340eac53c60bbfeea') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-BoldItalic.eot'); /* IE9 Compat Modes */
+  src: url('Vollkorn-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vollkorn-BoldItalic.woff') format('woff'), /* Modern Browsers */
+       url('Vollkorn-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vollkorn-BoldItalic.svg#b041bed4c26baa98026cc2b64a25dd81') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-Semibold.eot'); /* IE9 Compat Modes */
+  src: url('Vollkorn-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vollkorn-Semibold.woff') format('woff'), /* Modern Browsers */
+       url('Vollkorn-Semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vollkorn-Semibold.svg#0e2e1e38b0329f71ab58c91b7e4fb558') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  600;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-SemiboldItalic.eot'); /* IE9 Compat Modes */
+  src: url('Vollkorn-SemiboldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vollkorn-SemiboldItalic.woff') format('woff'), /* Modern Browsers */
+       url('Vollkorn-SemiboldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vollkorn-SemiboldItalic.svg#ba40b50636decdaf94c2c014c61cf682') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  600;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-Medium.eot'); /* IE9 Compat Modes */
+  src: url('Vollkorn-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vollkorn-Medium.woff') format('woff'), /* Modern Browsers */
+       url('Vollkorn-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vollkorn-Medium.svg#4057c7f30eb11c440d7c538ed2d05194') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-MediumItalic.eot'); /* IE9 Compat Modes */
+  src: url('Vollkorn-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vollkorn-MediumItalic.woff') format('woff'), /* Modern Browsers */
+       url('Vollkorn-MediumItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vollkorn-MediumItalic.svg#320fa9268129fa7a5baff76ef2c3b0fe') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-Italic.eot'); /* IE9 Compat Modes */
+  src: url('Vollkorn-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vollkorn-Italic.woff') format('woff'), /* Modern Browsers */
+       url('Vollkorn-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vollkorn-Italic.svg#98961ae4718e843253f083e38d65264f') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-Regular.eot'); /* IE9 Compat Modes */
+  src: url('Vollkorn-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vollkorn-Regular.woff') format('woff'), /* Modern Browsers */
+       url('Vollkorn-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vollkorn-Regular.svg#48100ff47af781fe4e21ccb4ffe53181') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
