@@ -4,11 +4,16 @@
     
 <head>
     <title>Martin Campillo - Carnet de notes</title>
-    <link rel="icon" href="/images/fav.ico" type="image/x-icon">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA////AAAAowBAQEAATExNADAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFBQMDAwMDAwMCAwUAAAAABQEBAgEBAQEBAgEBAAAAAAUFAwMDAwMDAwIDAwAAAAAFAwMDAwMDAwMCAwUAAAAABQUDAwMDAwMDAgMDAAAAAAUDAwMDAwMDAwIDBQAAAAAFBQMDAwMDAwMCAwMAAAAABQMDAwMDAwMDAgMFAAAAAAUFAwMDAwMDAwIDAwAAAAAFAwMDAwMDAwMCAwUAAAAABQUDAwMDAwMDAgMDAAAAAAUDAwMDAwMDAwIDBQAAAAAFBQMDAwMDAwMCAwMAAAAABQMDAwMDAwMDAgMFAAAAAAUFAwMDAwMDAwIDAwAAAAAFBAQEBAQEBAQCBAUAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAAA=" rel="icon" type="image/x-icon" />
     <style type="text/css">
         @import url("./css/main.css");    
     </style>
     <script src="./js/jquery-2.1.4.min.js"></script>
+    
+    <link rel="stylesheet" href="./libs/highlight/styles/dark.css">
+    <script src="./libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 
 <body class="day">
@@ -26,55 +31,73 @@ include("menu.php");
     
 
 <div id="content">
+    
 <?php
 $content = $_GET["content"];
 $getFile = $_GET["file"];
     
 $path = "./content/".$content."/";
-$files = createArray($path);
-
     
-if(isset($content)){
-    echo "<h2>".$content."</h2>";
-    if(empty($files)){
-       echo "Vide";
-    }
-
-    else {
-        echo "<ul>";
-        foreach($files as $item){
-            echo "<li><a href=\"#".$item["name"]."\">".$item["name"]."</a> <span>".date("d/m/y",$item["date"])."</span></li>";
-        }
-        echo "<ul>";
-    }
-}
-else {
+$files = createArray($path);
+usort($files,function($a,$b){
+    return ($a['date'] < $b['date']) ? -1 : 1;
+});
+echo "<div id=\"texts\">";
+    
+if(!isset($content)) {
     echo $Parsedown -> text($readme);
 }
 ?>
-    <div id="files">
-
+    
         <?php
-        if(empty($files)){
-           echo "Vide";
-        }
-        
-        else {
+        echo "<h1>".$content."</h1>";
+        if(!empty($files) || isset($content)){
             foreach($files as $item){
-                echo "<div id=\"".$item["name"]."\">";
-                echo "<h3>".$item["name"]."</h3>";
+                
+                //echo "<h3>".$item["name"]."</h3>";
+                // Markdown
                 if($item["extension"]=="md"){
-                    echo $Parsedown -> text(file_get_contents($path.$item["name"]));
+                    echo "<div id=\"".$item["name"]."\">";
+                    echo $Parsedown -> text(file_get_contents($path.$item["basename"]));
+                    echo "</div>";
                 }
-                if($item["extension"]=="mp3"){
-                    echo "<audio src=\"".$path.$item["name"]."\" controls>";
+                // Audio (mp3 or wav)
+                
+                
+                if($item["extension"]=="pde" || $item["extension"]=="js"){
+                    echo "<pre>";
+                    echo "<code class=\"".$item["extension"]."\">";
+                    echo file_get_contents($path.$item["basename"]);
+                    echo "</code>";
+                    echo "</pre>";
                 }
                 
-                echo "</div>";
+                
             }
         }
         ?>
-        
+    </div>
+    <div id="images">
+        <?php
+        if(!empty($files) || isset($content)){
+            foreach($files as $item){
+                // Images
+                if($item["extension"]=="jpg" || $item["extension"]=="jpeg" || $item["extension"]=="gif" || $item["extension"]=="png"){
+                    echo "<div id=\"".$item["name"]."\">";
+                    echo "<img src=\"".$path.$item["basename"]."\">";
+                    echo "</div>";
+                }
+                if($item["extension"]=="mp3" || $item["extension"]=="wav"){
+                    echo "<div id=\"".$item["name"]."\">";
+                    echo "<audio src=\"".$path.$item["basename"]."\" controls>";
+                    echo "</div>";
+                }
+                if($item["extension"]=="webloc"){
+                    echo "<iframe src=\"https://player.vimeo.com/video/".$item["name"]."?color=ffffff&byline=0&portrait=0\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
+                }
+            }
+        }
+        ?>
     </div>
 </div>
 

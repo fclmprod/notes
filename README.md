@@ -1,47 +1,32 @@
-1. Better CSS
-    - Margins
-    - Paddings
-    - Line Heights
-    - Images
-    - Audio ?
-2. Support
-    - Image
-    - YT through markdown ?
-    - 
-  
-
 # notes
 
-**Carnet de note personnel.**
+**Carnet de note personnel. Système de gestion de contenu sans base de donnée ni interface d'administration. Achivage, stockage et présentation des divers textes, images, videos et sons autour de mon travail.**
 
-## Main Parts
+### Fichiers supportés :
+* Markdown (.md)
+* Images (.jpg, .png, .gif)
+* Vidéos (Vimeo)
+* Audio (.mp3, .wav)
+* Codes source (.pde, .js, .html, .php)
 
-Style MD
+---
 
-Add condition if dir or file
-
-URL rewriting
-
-Better UI
-
-Display everything and file -> anchor
-
-File displayer
-
-Viewer post it feedback 
-
-Personal Deployement
-
-Sharing and explaining;
-
-
-### Functions to make :
-Directory to array
-
-Sorting array √
-
-Display array as menu with links
-
-## /!\ Do not Forget /!\
+### To do :
+* URL rewriting
+* Post It feedback system
+* Fading day/night switch
+* Preloader
+* Choose and delete Higlight styles
+* Make it printable !
 * Thanks (UseAndModify, ParseDown)
-....
+* Better Documentation
+* src export for other users.
+
+
+### Merci :
+* Use and Modify
+* Pasedown.php
+* Highlight.js
+* Jquery
+
+License Creative Commons BY-SA

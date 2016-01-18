@@ -6,17 +6,19 @@
 <?php
 
 require_once("./php/functions.php");
-$path = "./content/";
-displayArray(sortArray(createArray($path),"date"));
+$root = "./content/";
+displayArray(sortArray(createArray($root),"date"));
 
 ?>  
-    <div class="colorSwitch night">  
-      <input type="checkbox" id="colorSwitch" />
-      <label for="colorSwitch"></label>
+    <div id="footer">
+        <div class="colorSwitch night">  
+          <input type="checkbox" id="colorSwitch" checked />
+          <label for="colorSwitch"></label>
+        </div>
+        <h6>Version 0.0.1
+        <br>
+        <a href="https://github.com/fclmprod/notes/">github.com/fclmprod/notes/</a></h6>
     </div>
-    
-    <h6>Version 0.0.1</h6>
-    
     <script src="./js/main.js"></script>
     
 </div>

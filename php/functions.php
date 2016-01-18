@@ -6,15 +6,16 @@
  */
 
 function createArray($path){
-    $filesArray = [];
+    $array = [];
     $num = 0;
     
     if (is_dir($path)){
       if ($dh = opendir($path)){
         while (($file = readdir($dh))){
             if($file != "." && $file != ".." && $file != ".DS_Store") {
-                $filesArray[$num++] = [
-                    "name" => $file,
+                $array[$num++] = [
+                    "basename" => pathinfo($path.$file, PATHINFO_BASENAME),
+                    "name" => pathinfo($path.$file, PATHINFO_FILENAME),
                     "extension" => pathinfo($path.$file, PATHINFO_EXTENSION),
                     "date" => filemtime($path.$file)
                 ];
@@ -23,17 +24,14 @@ function createArray($path){
         closedir($dh);
       }
     }
-    return $filesArray;
+    return $array;
 }
 
-function sortArray($array,$key) {
-    
+function sortArray($array) {
     function cmp($a, $b){
       return ($a['date'] > $b['date']) ? -1 : 1;
     }
-
     usort($array, 'cmp');
-    
     return $array;
 }
     

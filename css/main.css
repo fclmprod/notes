@@ -4,19 +4,18 @@
  * 2. Fonts
  *    - Headings
  *    - Texts
- *    - Miscellanous
+ *    - Monospace
  */
-
 @import url('./init.css');
 
 @import url('../fonts/Work Sans/font.css');
-@import url('../fonts/Source Sans Pro/font.css');
-@import url('../fonts/Anonymous Pro/font.css');
 @import url('../fonts/Vollkorn/font.css');
+@import url('../fonts/Anonymous Pro/font.css');
 
 /* - STYLE -
  * 
  * 1. Colors
+ * 2. Fonts
  *
  */
 
@@ -30,7 +29,11 @@
     color: rgba(245, 245, 240,255);
 }
 .night a {color: lightblue;}
-.night a span {color:inherit;}
+.night a span {color:rgba(245, 245, 240,255);}
+
+strong {font-weight: 900;}
+em {font-style: italic;} 
+
 
 body {
     font-family: "Vollkorn";
@@ -40,9 +43,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {font-family: "Work Sans";}
 
-a {
-    color: blue;
-}
+a {color: blue;}
 
 /* - MENU - */
 
@@ -51,7 +52,8 @@ a {
     top: 0;
     left: 0;
     
-    width: 200px;
+    width: 20%;
+    height: 100%;
     
     padding: 3mm;
 }
@@ -79,14 +81,23 @@ a {
     line-height: 12pt;
     font-family: "Vollkorn";
     font-weight: 600;
+    
+    list-style-type: disc;
+    margin-left: 3mm;
 }
 
 #menu li span {
     font-family: "Anonymous Pro";
     font-size: 6pt;
+    opacity: 0.75;
+    color: #666;
 }
 
-/* Version */
+/* Footer */
+#menu #footer {
+    position: absolute;
+    bottom: 9mm;
+}
 
 #menu h6 {
     margin-top: 3mm;
@@ -97,7 +108,6 @@ a {
 
 /* Switch */
 .colorSwitch {
-    margin-top: 90mm;
     position: relative;
     width: 66px;
     height: 24px;
@@ -110,21 +120,18 @@ a {
     border-radius: 50px;
     box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
 }
-
 .colorSwitch:after {
     content: 'Nuit';
     position: absolute;
     right: 10px;
     z-index: 0;
 }
-
 .colorSwitch:before {
     content: 'Jour';
     position: absolute;
     left: 10px;
     z-index: 0;
 }
-
 .colorSwitch label {
     
     position: absolute;
@@ -144,31 +151,98 @@ a {
     transition: all 0.4s ease;
     z-index: 1;
 }
-
 .colorSwitch input[type=checkbox] {
     visibility: hidden;
 }
-
 .colorSwitch input[type=checkbox]:checked + label {
     left: 30px;
     background: rgb(245, 245, 240);
 }
 
+/* - CONTENT - */
+
 #content {
-    margin-left: 300px;
-    padding: 10px;
-    
+    box-sizing: border-box;
+    width: 80%;
+    position: absolute;
+    left: 20%;
+    padding: 3mm;
+    top: 0;
+    bottom: 0px;
 }
+
+#content h1 {
+    font-size: 18pt;
+    font-weight: 900;
+    margin: 6mm 0mm 3mm 0mm; 
+}
+
 #content h2 {
     margin-top: 10px;
-    
-    font-size: 21pt;
+    font-size: 15pt;
     font-weight: 700;
 }
+
+#content ul {
+    list-style-type: circle;
+    margin-left: 3mm;
+}
+
+#content img {
+    width:100%;
+}
+
+#content #texts, #content #images {
+    overflow-y: scroll;
+}
+
+#content #texts {
+    position: fixed;
+    width: 38%;
+    height: 100%;
+    bottom:0;
+}
+#content #images {
+    right: 0;
+    top: 0;
+    position: fixed;
+    width: 40%;
+    height: 100%
+}
+
+#content #texts {
+    font-size: 12pt;
+    line-height: 15pt;
+    
+    margin-bottom: 3mm;
+}
+
+#content #texts h5 {
+     font-size: 15pt;
+    line-height: 18pt;
+    font-weight: 600;
+    margin: 3mm 0;
+}
+
+#content #texts p {
+    margin-bottom: 3mm;
+}
+#content #texts ul {
+    padding-left: 1mm;
+}
+
+#content audio {
+    margin: 6mm;
+}
+
 
 
 /* DEV ONLY */
 pre {
-    font-family: monospace;
-    font-size: 8pt;
+    font-family: "Anonymous Pro";
+    font-size:9pt;
+}
+
+code {
+    border-radius: 1mm;
 }
